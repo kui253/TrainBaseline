@@ -1,0 +1,6 @@
+usage: generate_llm.py [-h] [--base_model_dir BASE_MODEL_DIR]
+                       [--peft_model_dir PEFT_MODEL_DIR]
+                       [--chat_template_dir CHAT_TEMPLATE_DIR]
+                       [--sys_prompt SYS_PROMPT] [--interact]
+                       [--max_sample MAX_SAMPLE]
+generate_llm.py: error: unrecognized arguments: the given math problem, and output the rationale and your choice in the format: Rationale: ... \n Answer: a/b/c/d/e. Do not output any other information

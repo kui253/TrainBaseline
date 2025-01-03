@@ -1,0 +1,434 @@
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.79it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.77it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.67it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.88it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.82it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]The attention mask is not set and cannot be inferred from input because pad token is same as eos token.As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  5%|▌         | 1/20 [00:10<03:15, 10.29s/it] 10%|█         | 2/20 [00:22<03:25, 11.41s/it] 15%|█▌        | 3/20 [00:34<03:17, 11.62s/it] 20%|██        | 4/20 [00:46<03:09, 11.85s/it] 25%|██▌       | 5/20 [00:59<03:01, 12.11s/it] 30%|███       | 6/20 [01:11<02:49, 12.08s/it]******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+what least number should be added to 1022 , so that the sum is completely divisible by 25 ?
+a ) 4 , b ) 3 , c ) 2 , d ) 0 , e ) 5
+assistant
+To find the least number that should be added to 1022 to make it completely divisible by 25, we can divide 1022 by 25 and look at the remainder.
+
+\[ 1022 \div 25 = 40 \text{ remainder } 22 \]
+
+This means when you divide 1022 by 25, you get a quotient of 40 and a remainder of 22. To make the number completely divisible by 25 (i.e., no remainder), we need to add enough to reach the next multiple of 25. 
+
+Since the remainder is 22, we need to add \(25 - 22 = 3\) to 1022 to make it completely divisible by 25.
+
+Rationale: By dividing 1022 by 25 and identifying the remainder, we determine how much more is needed to reach the next whole multiple of 25.
+
+Answer: b) 3
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a number x is multiplied by 7 , and this product is then divided by 3 . if the positive square root of the result of these two operations equals x , what is the value of x if x ≠ 0 ?
+a ) 25 / 9 , b ) 7 / 3 , c ) 5 / 3 , d ) 3 / 5 , e ) 9 / 25
+assistant
+Rationale: To find the value of \(x\) under the given conditions, let's express the operations algebraically and solve for \(x\). According to the problem, we have:
+
+1. Multiply \(x\) by 7: \(7x\)
+2. Divide the result by 3: \(\frac{7x}{3}\)
+3. The positive square root of the result equals \(x\): \(\sqrt{\frac{7x}{3}} = x\)
+
+We can solve this equation to find \(x\).
+
+\[
+\begin{align*}
+\sqrt{\frac{7x}{3}} &= x \\
+\Rightarrow \frac{7x}{3} &= x^2 \\
+\Rightarrow x^2 - \frac{7x}{3} &= 0 \\
+\Rightarrow 3x^2 - 7x &= 0 \\
+\Rightarrow x(3x - 7) &= 0
+\end{align*}
+\]
+
+From here, we see that \(x = 0\) or \(3x - 7 = 0\). Since it's specified that \(x \neq 0\), we ignore \(x = 0\) and solve:
+
+\[
+3x - 7 = 0 \\
+
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a money lender finds that due to a fall in the annual rate of interest from 8 % to 7 1 / 5 % his yearly income diminishes by rs . 61.50 . his capital is
+a ) 22.378 , b ) 37.78 , c ) 76.88 , d ) 27.888 , e ) 12.771
+assistant
+Rationale: To find the capital based on the decrease in income due to a fall in the annual rate of interest, we can use the formula: Decrease in Income = Capital * (Old Interest Rate - New Interest Rate) / Old Interest Rate.
+
+Let's convert the rates into decimals for easier calculation:
+- Old Interest Rate = 8% = 0.08
+- New Interest Rate = 7 1/5% = 7.2% = 0.072
+
+Given that the decrease in income is Rs. 61.50, we substitute these values into the formula:
+
+\[61.50 = \text{Capital} \times (\frac{0.08 - 0.072}{0.08})\]
+
+Solving for Capital:
+
+\[61.50 = \text{Capital} \times \frac{0.008}{0.08}\]
+
+\[61.50 = \text{Capital} \times 0.1\]
+
+So,
+
+\[\text{Capital} = \frac{61.50}{0.1} = 615\]
+
+None of the provided options (a) 2
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a train 125 m long passes a man , running at 5 km / hr in the same direction in which the train is going , in 10 seconds . the speed of the train is :
+a ) 10 km / hr , b ) 50 km / hr , c ) 14 km / hr , d ) 17 km / hr , e ) 77 km / hr
+assistant
+Rationale: To find the speed of the train, we first need to understand that the man's speed does not affect the relative speed between the man and the train because they are moving in the same direction. The key here is to use the time it takes for the train to pass the man and the length of the train to calculate the relative speed between the train and the man. We can convert all speeds into the same unit (m/s or km/h) for consistency.
+
+Given:
+- Length of the train = 125 m
+- Time taken to pass the man = 10 seconds
+- Speed of the man = 5 km/hr
+
+First, let's convert the man's speed from km/hr to m/s to match the units with the train's length and time.
+\[5 \text{ km/hr} = 5 \times \frac{1000}{3600} \text{ m/s} = \frac{5}{3.6} \text{ m/s}\]
+
+Next, we calculate the relative speed between the train and the man in m/s using the formula:
+\[ \text{Relative Speed} = \frac{\text{Distance}}{\text{Time}} \]
+\[ \text{Relative Speed} = \frac{
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a man can do a piece of work in 5 days , but with the help of his son , he can finish it in 3 days . in what time can the son do it alone ?
+a ) 5 , b ) 5 1 / 2 , c ) 7 1 / 2 , d ) 6 , e ) 9 1 / 2
+assistant
+Rationale: We'll use the concept that work rates add when two people are working together. Let's denote the rate at which the father works as \(F\) (work per day) and the rate at which the son works as \(S\) (work per day). The combined rate is \(F + S\).
+
+Given that the father can complete the work in 5 days, we have:
+\[F = \frac{1}{5}\] 
+
+When they work together, they can complete the work in 3 days, so:
+\[F + S = \frac{1}{3}\]
+
+Substituting the value of \(F\) into the equation gives us:
+\[\frac{1}{5} + S = \frac{1}{3}\]
+
+Solving for \(S\) to find the rate at which the son works gives us:
+\[S = \frac{1}{3} - \frac{1}{5} = \frac{5-3}{15} = \frac{2}{15}\]
+
+This means the son can complete \(\frac{2}{15}\) of the work per day. To find out how many days (\(D\)) it takes for him to complete the work alone, we set up the equation:
+\[S * D = 1\
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+how many three - digit numbers are divisible by 6 in all ?
+a ) 149 , b ) 150 , c ) 151 , d ) 166 , e ) none
+assistant
+Rationale: To find out how many three-digit numbers are divisible by 6, we need to identify the range of three-digit numbers that meet this criterion. A number is divisible by 6 if it is divisible by both 2 and 3. 
+
+The smallest three-digit number divisible by 6 is 102 (6 * 17), and the largest is 996 (6 * 166). To find the total count, we use the formula for finding the number of terms in an arithmetic sequence: 
+
+\[ \text{Number of terms} = \frac{\text{Last term} - \text{First term}}{\text{Common difference}} + 1 \]
+
+In this case, the first term \(a_1\) is 102, the last term \(a_n\) is 996, and the common difference \(d\) is 6 (since we're counting every multiple of 6).
+
+\[ \text{Number of terms} = \frac{996 - 102}{6} + 1 = \frac{894}{6} + 1 = 149 + 1 = 150 \]
+
+Answer: b) 150
+
+
+******************************
+ 35%|███▌      | 7/20 [01:23<02:36, 12.01s/it] 40%|████      | 8/20 [01:30<02:05, 10.44s/it] 45%|████▌     | 9/20 [01:39<01:50, 10.06s/it] 50%|█████     | 10/20 [01:50<01:42, 10.30s/it] 55%|█████▌    | 11/20 [01:57<01:25,  9.54s/it] 60%|██████    | 12/20 [02:08<01:19,  9.89s/it] 65%|██████▌   | 13/20 [02:14<01:01,  8.77s/it]Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+oil cans x and y are right circular cylinders and the height and radius of y are each 5 times those of x . if the oil in can x filled to capacity sells for $ 1 , how much does the oil in y sell for if y is only 1 / 5 th filled ?
+a ) $ 25 , b ) $ 26 , c ) $ 27 , d ) $ 28 , e ) $ 30
+assistant
+Rationale: First, let's determine the volume relationship between the two oil cans. The volume \(V\) of a cylinder is given by the formula \(V = \pi r^2 h\), where \(r\) is the radius and \(h\) is the height of the cylinder. Given that the height and radius of can Y are each 5 times those of can X, the volume of can Y relative to can X would be:
+
+\[ V_Y = \pi (5r)^2 (5h) = 125 \pi r^2 h \]
+
+This shows that the volume of can Y is 125 times that of can X. 
+
+Since can X is filled to capacity and sells for $1, the price per unit volume is $1/Volume(X). To find out how much oil in can Y sells for when it is only \(1/5\) filled, we need to calculate the volume of \(1/5\) of can Y and then apply the price per unit volume.
+
+The volume of \(1/5\) filled can Y is:
+\[ \frac{1}{5} \times 125 \pi r^2 h = 25 \pi r^2 h \]
+
+Given
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+if paint costs $ 3.10 per quart , and a quart covers 20 square feet , how much will it cost to paint the outside of a cube 10 feet on each edge ?
+a ) $ 1.60 , b ) $ 16.00 , c ) $ 93.00 , d ) $ 108.00 , e ) $ 196.00
+assistant
+Rationale: First, determine the total surface area of the cube that needs to be painted. The surface area of a cube is calculated as \(6 \times (\text{edge length})^2\). With an edge length of 10 feet, the total surface area is \(6 \times (10)^2 = 600\) square feet. Since one quart covers 20 square feet, we need \(600 / 20 = 30\) quarts to cover the entire surface. At $3.10 per quart, the total cost is \(30 \times 3.10 = \$93.00\).
+
+Answer: c) $ 93.00
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+how many digits are required to number a book containing 250 pages ?
+a ) 756 , b ) 642 , c ) 492 , d ) 372 , e ) 250
+assistant
+Rationale: To solve this problem, we need to calculate how many digits are required for each page from 1 to 250.
+
+- Pages 1 through 9 use 1 digit each. So, \(9 \times 1 = 9\) digits.
+- Pages 10 through 99 use 2 digits each. There are \(99 - 10 + 1 = 90\) such pages, so \(90 \times 2 = 180\) digits.
+- For pages 100 to 250, each page uses 3 digits. There are \(250 - 100 + 1 = 151\) such pages, thus \(151 \times 3 = 453\) digits.
+
+Adding these up: \(9 + 180 + 453 = 642\) digits.
+
+Answer: b) 642
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+susan drives from city a to city b . after two hours of driving she noticed that she covered 80 km and calculated that , if she continued driving at the same speed , she would end up been 15 minutes late . so she increased her speed by 10 km / hr and she arrived at city b 36 minutes earlier than she planned . find the distance between cities a and b .
+a ) 223 , b ) 376 , c ) 250 , d ) 378 , e ) 271
+assistant
+Rationale: We can solve this problem by breaking it down into steps. First, we need to find Susan's original speed. Then, we can use the information about how increasing her speed by 10 km/hr affected her arrival time to calculate the total distance between City A and City B.
+
+Step 1: Calculate Original Speed
+In the first two hours, Susan covered 80 km. Since speed is distance divided by time, her original speed (S) can be calculated as follows:
+\[ S = \frac{80\,km}{2\,hours} = 40\,km/hour \]
+
+Step 2: Calculate the Time Difference Before and After Increasing Speed
+If Susan had continued at the original speed, she would have been 15 minutes (or 0.25 hours) late. However, by increasing her speed by 10 km/hr, she arrived 36 minutes earlier than planned. This means the difference in travel time due to speeding up is 0.61 hours (36 minutes + 15 minutes).
+
+Step 3: Calculate the Distance with Increased Speed
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+if 15 % of a is the same as 30 % of b , then a : b is :
+a ) 1 : 4 , b ) 4 : 3 , c ) 6 : 7 , d ) 3 : 5 , e ) 2 : 1
+assistant
+Rationale: Given that 15% of a equals 30% of b, we can express this relationship algebraically as:
+\[0.15a = 0.30b\]
+
+To find the ratio of \(a\) to \(b\), let's solve for one variable in terms of the other.
+
+\[0.15a = 0.30b\]
+Divide both sides by 0.15:
+\[a = \frac{0.30}{0.15}b\]
+\[a = 2b\]
+
+This means that for every unit of \(b\), \(a\) is twice as much. Thus, the ratio of \(a\) to \(b\) is \(2:1\).
+
+Answer: e) 2 : 1
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+of the total amount that jill spent on a shopping trip , excluding taxes , she spent 25 percent on clothing , 25 percent on food , and 50 percent on other items . if jill paid a 10 percent tax on the clothing , no tax on the food , and an 2 percent tax on all other items , then the total tax that she paid was what percent of the total amount that she spent , excluding taxes ?
+a ) 3 , b ) 4.5 , c ) 4 , d ) 3.5 , e ) 5
+assistant
+Rationale: To determine the total tax Jill paid as a percentage of the total amount she spent (excluding taxes), we first need to calculate the tax paid on each category of her spending and then divide the total tax by the total amount spent before adding any taxes. 
+
+Let's assume the total amount Jill spent (excluding taxes) is $100 for simplicity.
+
+- Clothing: 25% of $100 = $25. The tax on clothing is 10% of $25 = $2.5.
+- Food: 25% of $100 = $25. There is no tax on food.
+- Other items: 50% of $100 = $50. The tax on other items is 2% of $50 = $1.
+
+Total tax paid = $2.5 + $0 + $1 = $3.5
+
+To find out what percent this tax is of the total amount spent (excluding taxes):
+
+\[ \text{Percent} = \left( \frac{\text{Total tax paid}}{\text{Total
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a trader sells 40 metres of cloth for rs . 8200 at a profit of rs . 20 per metre of cloth . how much profit will the trder earn on 40 metres of cloth ?
+a ) rs . 800 , b ) rs . 1500 , c ) rs . 1000 , d ) rs . 1200 , e ) none of these
+assistant
+Rationale: First, calculate the total profit earned by the trader from selling 40 meters of cloth. This can be done by multiplying the profit per meter by the number of meters sold. Then, compare the result to the options provided.
+
+Answer: To find the total profit, multiply the profit per meter (Rs. 20) by the number of meters (40):
+\[ \text{Total Profit} = 40 \times 20 = 800 \]
+
+The trader earns Rs. 800 on 40 meters of cloth, making the correct answer:
+a) Rs. 800
+
+
+******************************
+ 70%|███████   | 14/20 [02:19<00:44,  7.49s/it] 75%|███████▌  | 15/20 [02:23<00:32,  6.49s/it] 80%|████████  | 16/20 [02:35<00:32,  8.24s/it] 85%|████████▌ | 17/20 [02:46<00:27,  9.05s/it] 90%|█████████ | 18/20 [02:56<00:18,  9.21s/it] 95%|█████████▌| 19/20 [03:09<00:10, 10.31s/it]100%|██████████| 20/20 [03:18<00:00, 10.03s/it]100%|██████████| 20/20 [03:18<00:00,  9.93s/it]
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a certain industrial loom weaves 0.13 meters of cloth every second . approximately how many seconds will it take for the loom to weave 15 meters of cloth ?
+a ) 114 , b ) 115 , c ) 116 , d ) 117 , e ) 118
+assistant
+Rationale: To find out how many seconds it will take for the loom to weave 15 meters of cloth, we can divide the total amount of cloth needed by the amount of cloth woven per second.
+
+Answer: \( \frac{15 \text{ meters}}{0.13 \text{ meters/second}} = 115.38 \text{ seconds} \)
+
+This value is closest to option b) 115 seconds.
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+if 625 ( 5 ^ x ) = 1 then x =
+a ) – 2 , b ) - 4 , c ) 0 , d ) - 1 , e ) 2
+assistant
+Rationale: We can solve this equation by expressing 625 as a power of 5, which is \(5^4\). Therefore, we have \(5^{x} = \frac{5^4}{1}\). For \(5^{x}\) to equal 1, given that \(5^0 = 1\), it implies that \(x\) must be 0.
+
+Answer: c) 0
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+if an integer e is to be chosen at random from the integers 1 to 96 , inclusive , what is the probability that e ( e + 1 ) ( e + 2 ) will be divisible by 8 ?
+a ) 1 / 4 , b ) 3 / 8 , c ) 1 / 2 , d ) 5 / 8 , e ) 3 / 4
+assistant
+Rationale: To find the probability that \(e(e+1)(e+2)\) is divisible by 8 for an integer \(e\) chosen from 1 to 96, we need to understand under what conditions this product is divisible by 8. Since 8 = \(2^3\), the product must contain at least three factors of 2.
+
+Given that \(e\), \(e+1\), and \(e+2\) are three consecutive integers, one of them must always be even, meaning it's divisible by 2. For divisibility by 8, we need to ensure there are at least two even numbers among the three, or at least one of them must be divisible by 4.
+
+- **Divisible by 4**: For \(e\) or \(e+2\) to be divisible by 4, \(e\) can be any even number, which happens every other number. So, out of every four consecutive numbers, there are exactly two that can fulfill this condition.
+  
+- **Divisible by 8**: This occurs when one of the three numbers is divisible by 8. This happens less frequently than being divisible by 4 because it only happens when \(e\) itself is a multiple of 8.
+
+To count favorable outcomes:
+
+1
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+rs . 6000 is lent out in two parts . one part is lent at 7 % p . a simple interest and the other is lent at 10 % p . a simple interest . the total interest at the end of one year was rs . 450 . find the ratio of the amounts lent at the lower rate and higher rate of interest ?
+a ) 5 : 1 , b ) 5 : 7 , c ) 5 : 5 , d ) 5 : 9 , e ) 5 : 3
+assistant
+Rationale: Let's denote the amount lent at 7% as x and the amount lent at 10% as y. We know that x + y = 6000 (since the total amount lent is Rs. 6000). The total interest earned in a year is the sum of the interest from both parts, which can be represented as 0.07x + 0.10y = 450 (since the total interest at the end of one year was Rs. 450).
+
+We can solve these two equations to find the values of x and y. The ratio we're looking for is x:y.
+
+First, solve for x or y in the first equation:
+x + y = 6000
+
+Second, rearrange the second equation to solve for one variable in terms of the other. Let's solve for x in terms of y:
+0.07x + 0.10y = 450 => x = (450 - 0.10y) / 0.07
+
+Now substitute this expression for x into
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+a grocer has a sale of rs . 4435 , rs . 4927 , rs . 4855 , rs . 5230 and rs . 4562 for 5 consecutive months . how much sale must he have in the sixth month so that he gets an average sale of rs . 4500 ?
+a ) 1991 , b ) 2991 , c ) 3991 , d ) 4521 , e ) 5991
+assistant
+Rationale: To find out how much sale the grocer must have in the sixth month to achieve an average sale of Rs. 4500, first calculate the total sale required for 6 months by multiplying the desired average by the number of months (6). Then subtract the total sale from the first 5 months from this required total.
+
+Total sale required for 6 months = 4500 * 6 = Rs. 27000
+
+Total sale for the first 5 months = 4435 + 4927 + 4855 + 5230 + 4562 = Rs. 24009
+
+Sale required in the sixth month = Total sale required for 6 months - Total sale for the first 5 months = Rs. 27000 - Rs. 24009 = Rs. 2991
+
+Answer: b) 2991
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+share rs . 5400 among john , jose & binoy in the ration 2 : 4 : 6 . find the amount received by john ?
+a ) 1800 , b ) 980 , c ) 1200 , d ) 1240 , e ) 1400
+assistant
+Rationale: First, sum up the parts of the ratio (2 + 4 + 6 = 12 parts). Then, divide the total amount (Rs. 5400) by the number of parts to find out the value of one part. Finally, multiply the value of one part by John's share of the ratio (2 parts) to find out how much John receives.
+
+Answer: a) 1800
+
+Calculation:
+1. Sum up the parts of the ratio: 2 + 4 + 6 = 12 parts
+2. Divide the total amount by the number of parts: Rs. 5400 / 12 = Rs. 450 per part
+3. Multiply the value of one part by John's share: Rs. 450 * 2 = Rs. 900
+
+However, it seems there was a misunderstanding in interpreting the answer choices or the calculation process. Based on the correct process:
+
+- Total parts = 2 + 4 + 6 = 12 parts
+- Value per part = Rs. 5400 / 12 = Rs. 450
+- Amount for John = 2 parts = Rs. 450 * 2 = Rs. 900
+
+The correct answer based
+
+
+******************************
+Agent: system
+Solve the given math problem, and output the rationale and your choice in the format: Rationale: ... 
+ Answer: a/b/c/d/e. Do not output any other information
+user
+p and q started a business investing rs . 48,000 and rs . 24,000 respectively . in what ratio the profit earned after 2 years be divided between p and q respectively ?
+a ) 2 : 6 , b ) 2 : 3 , c ) 2 : 1 , d ) 17 : 9 , e ) 17 : 4
+assistant
+Rationale: To find out how to divide the profit between P and Q, we need to look at their investments and the duration for which they invested. Since both invested for the same period (2 years), the profit share will be directly proportional to their investments.
+
+P's investment = Rs. 48,000
+Q's investment = Rs. 24,000
+
+The ratio of their investments = 48,000 : 24,000
+
+To simplify this ratio, divide each number by the greatest common divisor, which is 24,000:
+
+\[ \frac{48,000}{24,000} : \frac{24,000}{24,000} = 2 : 1 \]
+
+Thus, the profit should be divided between P and Q in the ratio of 2:1.
+
+Answer: c) 2 : 1
+
+

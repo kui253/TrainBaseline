@@ -1,0 +1,13 @@
+[2024-10-09 09:03:55,655] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+[93m [WARNING] [0m On Ampere and higher architectures please use CUDA 11+
+Traceback (most recent call last):
+  File "/home/wuhaodong/TrainBaselines/sft_model.py", line 162, in <module>
+    args, training_args, model_config = parser.parse_json_file(json_file=config_file)
+  File "/opt/miniconda3/envs/whd/lib/python3.10/site-packages/transformers/hf_argparser.py", line 399, in parse_json_file
+    with open(Path(json_file), encoding="utf-8") as open_json_file:
+FileNotFoundError: [Errno 2] No such file or directory: '--base_model_dir'

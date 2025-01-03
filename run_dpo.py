@@ -59,8 +59,8 @@ from trl import (
     get_kbit_device_map,
     get_peft_config,
     get_quantization_config,
-
 )
+
 
 def is_conversational(example) -> bool:
     r"""
@@ -96,11 +96,17 @@ def is_conversational(example) -> bool:
         if isinstance(maybe_messages, list):
             maybe_message = maybe_messages[0]
             # Each message must a list of dictionaries with keys "role" and "content"
-            if isinstance(maybe_message, dict) and "role" in maybe_message and "content" in maybe_message:
+            if (
+                isinstance(maybe_message, dict)
+                and "role" in maybe_message
+                and "content" in maybe_message
+            ):
                 return True
 
     return False
-def apply_chat_template(example, tokenizer) :
+
+
+def apply_chat_template(example, tokenizer):
     r"""
     Apply a chat template to a conversational example.
 
@@ -125,15 +131,21 @@ def apply_chat_template(example, tokenizer) :
 
     # Apply the chat template to the prompt, adding the generation prompt
     if "prompt" in example:
-        prompt = tokenizer.apply_chat_template(example["prompt"], tokenize=False, add_generation_prompt=True)
+        prompt = tokenizer.apply_chat_template(
+            example["prompt"], tokenize=False, add_generation_prompt=True
+        )
 
     # Apply the chat template to the entire prompt + completion
     if "prompt" in example:  # explicit prompt and prompt-completion case
         if "chosen" in example:
-            prompt_chosen = tokenizer.apply_chat_template(example["prompt"] + example["chosen"], tokenize=False)
+            prompt_chosen = tokenizer.apply_chat_template(
+                example["prompt"] + example["chosen"], tokenize=False
+            )
             chosen = prompt_chosen[len(prompt) :]
         if "rejected" in example and "prompt" in example:  # explicit prompt
-            prompt_rejected = tokenizer.apply_chat_template(example["prompt"] + example["rejected"], tokenize=False)
+            prompt_rejected = tokenizer.apply_chat_template(
+                example["prompt"] + example["rejected"], tokenize=False
+            )
             rejected = prompt_rejected[len(prompt) :]
         if "completion" in example:
             prompt_completion = tokenizer.apply_chat_template(
@@ -144,7 +156,9 @@ def apply_chat_template(example, tokenizer) :
         if "chosen" in example:
             chosen = tokenizer.apply_chat_template(example["chosen"], tokenize=False)
         if "rejected" in example:
-            rejected = tokenizer.apply_chat_template(example["rejected"], tokenize=False)
+            rejected = tokenizer.apply_chat_template(
+                example["rejected"], tokenize=False
+            )
 
     # Ensure that the prompt is the initial part of the prompt-completion string
     if "prompt" in example:
@@ -176,6 +190,8 @@ def apply_chat_template(example, tokenizer) :
         output["label"] = example["label"]
 
     return output
+
+
 def extract_prompt(example):
     r"""
     Extracts the shared prompt from a preference data example, where the prompt is implicit within both
@@ -191,6 +207,8 @@ def extract_prompt(example):
         "chosen": example["chosen"][idx:],
         "rejected": example["rejected"][idx:],
     }
+
+
 def maybe_extract_prompt(example):
     r"""
     Extracts the shared prompt from a preference data example, where the prompt is implicit within both
@@ -276,11 +294,12 @@ def maybe_extract_prompt(example):
     if "prompt" in example and is_conversational({"prompt": example["prompt"]}):
         return example
     else:
-        return extract_prompt({"chosen": example["chosen"], "rejected": example["rejected"]})
+        return extract_prompt(
+            {"chosen": example["chosen"], "rejected": example["rejected"]}
+        )
 
-def maybe_apply_chat_template(
-    example, tokenizer
-) :
+
+def maybe_apply_chat_template(example, tokenizer):
     r"""
     If the example is in a conversational format, apply a chat template to it.
 
@@ -335,7 +354,7 @@ if __name__ == "__main__":
     ################
     # Model & Tokenizer
     ###################
-    training_args.ddp_find_unused_parameters=False # key
+    training_args.ddp_find_unused_parameters = False  # key
     torch_dtype = (
         model_config.torch_dtype
         if model_config.torch_dtype in ["auto", None]
@@ -351,17 +370,22 @@ if __name__ == "__main__":
         quantization_config=quantization_config,
     )
     model = AutoModelForCausalLM.from_pretrained(
-        model_config.model_name_or_path, trust_remote_code=model_config.trust_remote_code, **model_kwargs
+        model_config.model_name_or_path,
+        trust_remote_code=model_config.trust_remote_code,
+        **model_kwargs,
     )
     peft_config = get_peft_config(model_config)
     if peft_config is None:
         ref_model = AutoModelForCausalLM.from_pretrained(
-            model_config.model_name_or_path, trust_remote_code=model_config.trust_remote_code, **model_kwargs
+            model_config.model_name_or_path,
+            trust_remote_code=model_config.trust_remote_code,
+            **model_kwargs,
         )
     else:
         ref_model = None
     tokenizer = AutoTokenizer.from_pretrained(
-        model_config.model_name_or_path, trust_remote_code=model_config.trust_remote_code
+        model_config.model_name_or_path,
+        trust_remote_code=model_config.trust_remote_code,
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -379,7 +403,9 @@ if __name__ == "__main__":
     with PartialState().local_main_process_first():
         ds = ds.map(maybe_extract_prompt, num_proc=training_args.dataset_num_proc)
         ds = ds.map(
-            maybe_apply_chat_template, num_proc=training_args.dataset_num_proc, fn_kwargs={"tokenizer": tokenizer}
+            maybe_apply_chat_template,
+            num_proc=training_args.dataset_num_proc,
+            fn_kwargs={"tokenizer": tokenizer},
         )
 
     train_dataset = ds[args.dataset_train_split]

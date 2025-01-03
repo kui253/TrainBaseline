@@ -4,7 +4,7 @@ hf_dataset_home=../hf_datasets
 cur_data=$(date +"%Y-%m-%d")
 cur_time=$(date +"%H-%M-%S")
 echo $cur_time
-export CUDA_VISIBLE_DEVICES=4,5,6,7
+export CUDA_VISIBLE_DEVICES=4,5
 log_dir=logs/dpo_Qwen/$cur_data
 output_dir=dpo_output/Qwen/$cur_data/$cur_time
 
@@ -23,9 +23,9 @@ else
 
 fi
 export NCCL_P2P_DISABLE=1
-accelerate launch --num_processes=4 --config_file multi_gpu.yaml run_dpo.py \
+accelerate launch --num_processes=2 --config_file multi_gpu.yaml run_dpo.py \
     --dataset_name $hf_dataset_home/trl-lib/ultrafeedback_binarized \
-    --model_name_or_path Qwen/Qwen2-7B-Instruct \
+    --model_name_or_path ../ckpts/Qwen/Qwen2-7B-Instruct \
     --learning_rate 5.0e-6 \
     --num_train_epochs 1 \
     --per_device_train_batch_size 2 \

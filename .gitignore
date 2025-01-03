@@ -4,3 +4,5 @@ wandb
 dpo_output/
 .vscode/
 __pycache__/
+ft_script/__pycache__/
+ft_script/wandb/
